@@ -26,7 +26,7 @@ function drush_config_diff_export($folder = null) {
     return drush_set_error(dt('The destination folder are mandatory.'));
   }
   if( !@dir($folder) ) {
-    if(!mkdir($folder, 775, TRUE)) {
+    if(!mkdir($folder, 0775, TRUE)) {
       return drush_set_error(dt('The destination folder @folder not writable.', array('@folder' => $folder)));
     }
   }
@@ -50,7 +50,7 @@ function drush_config_diff_export($folder = null) {
   $storage_comparer = new StorageComparer($source_storage, $active_storage, $config_manager);
 
   if (!$storage_comparer->createChangelist()->hasChanges()) {
-    return drush_log(dt('There are no changes to import.'), LogLevel::OK);
+    return drush_log(dt('There are no changes to export.'), LogLevel::OK);
   }
 
   $change_list = array();
