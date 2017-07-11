@@ -1,0 +1,9 @@
+{
+  "name": "Eurelis/config_diff_export",
+  "description": "A drupal module to export override conf.",
+  "type": "drupal-module",
+  "homepage": "https://github.com/Eurelis/config_diff_export",
+  "support": {
+    "issues": "https://github.com/Eurelis/config_diff_export/issues"
+  }
+}
