@@ -26,7 +26,7 @@ function drush_config_diff_export($folder = null) {
     return drush_set_error(dt('The destination folder are mandatory.'));
   }
   if( !@dir($folder) ) {
-    if(!mkdir($folder, 655, TRUE)) {
+    if(!mkdir($folder, 775, TRUE)) {
       return drush_set_error(dt('The destination folder @folder not writable.', array('@folder' => $folder)));
     }
   }
