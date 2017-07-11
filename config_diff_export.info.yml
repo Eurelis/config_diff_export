@@ -1,0 +1,7 @@
+name: Config Diff Export
+type: module
+description: Export only configuration which had been localy updated
+core: 8.x
+package: Config
+dependencies:
+  - config

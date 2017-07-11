@@ -1,0 +1,15 @@
+config_diff_export.form:
+  path: '/admin/config/development/configuration/diff'
+  defaults:
+    _title: 'Export Diff Config'
+    _form: '\Drupal\config_diff_export\Form\ConfigDiffExportForm'
+  requirements:
+    _permission: 'synchronize configuration'
+
+config_export_diff.export:
+  path: '/admin/config/development/configuration/diff/export'
+  defaults:
+    _controller: '\Drupal\config_diff_export\Controller\ConfigDiffExportController::downloadDiff'
+  requirements:
+    _permission: 'export configuration'
+

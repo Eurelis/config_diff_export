@@ -1,0 +1,6 @@
+config_diff_export.export_diff:
+  route_name: config_diff_export.form
+  title: Override items
+  parent_id: config.export
+
+
